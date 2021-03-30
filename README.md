@@ -1,5 +1,5 @@
 # Payload_Generation_Automation_tool
-This script automate payload generation process using Msfvenom exploit tool
+This script automate payload generation process using Msfvenom exploit tool. We can generate payload for all plaforms. By simply add list (ex: win_list.txt) as input and generate payload as per our requirements.
 
 # Requirement
 Os: kalilinux
